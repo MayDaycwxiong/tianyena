@@ -15,7 +15,7 @@ import com.tianyena.messageservicebiz.token.impl.TokenServiceImpl;
  * @version 1.0 2021/8/9
  * @description
  */
-public class test {
+public class WorkNotifyServiceImpl {
 
     public static void main(String[] args) throws ApiException {
         DingTalkClient client = new DefaultDingTalkClient("https://oapi.dingtalk.com/topapi/message/corpconversation/asyncsend_v2");
