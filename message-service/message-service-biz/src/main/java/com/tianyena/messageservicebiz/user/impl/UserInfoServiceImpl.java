@@ -34,9 +34,4 @@ public class UserInfoServiceImpl implements UserInfoService {
 
         System.out.println(JSON.toJSONString(response));
     }
-
-    public static void main(String[] args) throws ApiException {
-        new UserInfoServiceImpl().getUserInfoDetail(1L,0L,100L);
-    }
-
 }
