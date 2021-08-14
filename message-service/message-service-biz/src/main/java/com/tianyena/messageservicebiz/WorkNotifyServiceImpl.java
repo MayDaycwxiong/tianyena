@@ -2,12 +2,11 @@ package com.tianyena.messageservicebiz;
 
 import com.dingtalk.api.DefaultDingTalkClient;
 import com.dingtalk.api.DingTalkClient;
-import com.dingtalk.api.request.OapiGettokenRequest;
 import com.dingtalk.api.request.OapiMessageCorpconversationAsyncsendV2Request;
-import com.dingtalk.api.response.OapiGettokenResponse;
 import com.dingtalk.api.response.OapiMessageCorpconversationAsyncsendV2Response;
 import com.taobao.api.ApiException;
 import com.tianyena.messageservicebiz.token.impl.TokenServiceImpl;
+import com.tianyena.messageservicecommon.enums.ENInterfaceInfo;
 
 
 /**
@@ -18,7 +17,7 @@ import com.tianyena.messageservicebiz.token.impl.TokenServiceImpl;
 public class WorkNotifyServiceImpl {
 
     public static void main(String[] args) throws ApiException {
-        DingTalkClient client = new DefaultDingTalkClient("https://oapi.dingtalk.com/topapi/message/corpconversation/asyncsend_v2");
+        DingTalkClient client = new DefaultDingTalkClient(ENInterfaceInfo.WORK_NOTIFY_INFO.getUrl());
         OapiMessageCorpconversationAsyncsendV2Request request = new OapiMessageCorpconversationAsyncsendV2Request();
         request.setAgentId(1261543742L);
         request.setToAllUser(true);
