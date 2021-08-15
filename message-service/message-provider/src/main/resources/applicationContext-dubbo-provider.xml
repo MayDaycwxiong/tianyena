@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- Provider Config -->
+    <dubbo:application name="${dubbo.application.name}" logger="slf4j"/>
+    <dubbo:protocol id="dubbo" name="dubbo" host="${dubbo.protocol.host}" port="${dubbo.protocol.provider.port}" threadpool="cached"/>
+    <dubbo:registry protocol="zookeeper" address="${zookeeper.address}" timeout="${dubbo.timeout}" register="${dubbo.register}"/>
+    <dubbo:provider version="${dubbo.provider.version}" timeout="${dubbo.timeout}" retries="${dubbo.retries}"/>
+
+    <dubbo:service interface="com.tianyena.messageserviceapi.message.notice.SendDingNoticeMsgApi" ref="sendDingNoticeMsgProvider"/>
+</beans>
