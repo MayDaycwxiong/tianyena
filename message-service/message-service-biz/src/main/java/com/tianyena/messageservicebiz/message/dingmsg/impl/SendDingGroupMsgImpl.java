@@ -7,9 +7,13 @@ import com.dingtalk.api.request.OapiRobotSendRequest;
 import com.dingtalk.api.response.OapiRobotSendResponse;
 import com.taobao.api.ApiException;
 import com.tianyena.messageservicebiz.message.dingmsg.SendDingGroupMsg;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
+@Slf4j
 public class SendDingGroupMsgImpl implements SendDingGroupMsg {
 
     public void sendDingMsg(String webHooK, String msgType, String keyContent, String content, List<String> mobiles) throws ApiException {
@@ -26,7 +30,7 @@ public class SendDingGroupMsgImpl implements SendDingGroupMsg {
         request.setAt(at);
 
         OapiRobotSendResponse response = client.execute(request);
-        System.out.println(JSON.toJSONString(response));
+        log.info(JSON.toJSONString(response));
     }
 
 }

@@ -8,7 +8,11 @@ import com.taobao.api.ApiException;
 import com.tianyena.messageservicebiz.message.notice.SendDingNoticeMsg;
 import com.tianyena.messageservicebiz.token.impl.TokenServiceImpl;
 import com.tianyena.messageservicecommon.enums.ENInterfaceInfo;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
+@Service
+@Slf4j
 public class SendDingNoticeMsgImpl implements SendDingNoticeMsg {
 
     public void sendDingNotice() throws ApiException {
@@ -24,6 +28,6 @@ public class SendDingNoticeMsgImpl implements SendDingNoticeMsg {
         request.setMsg(msg);
 
         OapiMessageCorpconversationAsyncsendV2Response response = client.execute(request, new TokenServiceImpl().getToken().getAccessToken());
-        System.out.println(response.toString());
+        log.info(response.toString());
     }
 }

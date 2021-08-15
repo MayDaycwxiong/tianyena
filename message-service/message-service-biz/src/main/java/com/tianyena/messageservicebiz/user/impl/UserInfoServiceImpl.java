@@ -9,6 +9,8 @@ import com.taobao.api.ApiException;
 import com.tianyena.messageservicebiz.token.impl.TokenServiceImpl;
 import com.tianyena.messageservicebiz.user.UserInfoService;
 import com.tianyena.messageservicecommon.enums.ENInterfaceInfo;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 /**
  * @author cuiwx
@@ -19,6 +21,8 @@ import com.tianyena.messageservicecommon.enums.ENInterfaceInfo;
  * * AgentId：1261543742
  * * <p/>
  */
+@Service
+@Slf4j
 public class UserInfoServiceImpl implements UserInfoService {
 
     public void getUserInfoDetail(Long deptId, Long currentPage, Long pageSize) throws ApiException {
@@ -31,7 +35,6 @@ public class UserInfoServiceImpl implements UserInfoService {
         request.setOrderField("modify_desc");
         request.setLanguage("zh_CN");
         OapiV2UserListResponse response = client.execute(request, new TokenServiceImpl().getToken().getAccessToken());
-
-        System.out.println(JSON.toJSONString(response));
+        log.info(JSON.toJSONString(response));
     }
 }

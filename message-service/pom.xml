@@ -3,6 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.3</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
     <groupId>com.tianyena</groupId>
     <artifactId>message-service</artifactId>
@@ -13,11 +19,14 @@
         <module>message-service-biz</module>
         <module>message-service-api</module>
         <module>message-service-common</module>
+        <module>message-manager</module>
+        <module>message-provider</module>
     </modules>
 
     <properties>
         <java.version>1.8</java.version>
-        <project.version>1.0-SNAPSHOT</project.version>
+        <message-service.version>1.0-SNAPSHOT</message-service.version>
+        <spring-boot.version>2.5.3</spring-boot.version>
         <!--工具包-->
         <lombok.version>1.18.8</lombok.version>
         <fastjson.version>1.2.76</fastjson.version>
