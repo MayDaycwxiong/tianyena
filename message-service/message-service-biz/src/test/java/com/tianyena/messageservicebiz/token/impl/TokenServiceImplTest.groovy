@@ -18,7 +18,7 @@ class TokenServiceImplTest extends Specification {
 
     }
 
-    def "test getToken"() {
+    def "test getDingDingAccessToken"() {
         given:
         OapiGettokenResponse response = null
 
@@ -28,6 +28,16 @@ class TokenServiceImplTest extends Specification {
         then:
         response != null
         response.errcode == 0
+        notThrown(Exception)
+    }
+
+    def "test getToken"() {
+        given:
+
+        when:
+        String token = impl.getToken()
+        then:
+        token != null
         notThrown(Exception)
     }
 }
