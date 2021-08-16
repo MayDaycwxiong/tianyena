@@ -34,7 +34,7 @@ public class UserInfoServiceImpl implements UserInfoService {
         request.setSize(pageSize);
         request.setOrderField("modify_desc");
         request.setLanguage("zh_CN");
-        OapiV2UserListResponse response = client.execute(request, new TokenServiceImpl().getToken().getAccessToken());
+        OapiV2UserListResponse response = client.execute(request, new TokenServiceImpl().getToken());
         log.info(JSON.toJSONString(response));
     }
 }

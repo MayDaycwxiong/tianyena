@@ -23,7 +23,7 @@ class TokenServiceImplTest extends Specification {
         OapiGettokenResponse response = null
 
         when: "获取token"
-        response = impl.getToken()
+        response = impl.getDingDingAccessToken()
 
         then:
         response != null

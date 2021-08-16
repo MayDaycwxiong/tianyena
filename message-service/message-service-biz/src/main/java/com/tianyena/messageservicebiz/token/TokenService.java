@@ -1,8 +1,16 @@
 package com.tianyena.messageservicebiz.token;
 
-import com.dingtalk.api.response.OapiGettokenResponse;
-import com.taobao.api.ApiException;
+
+import java.util.concurrent.ExecutionException;
 
 public interface TokenService {
-    OapiGettokenResponse getToken() throws ApiException;
+    /**
+     * @description
+     * <p>
+     *     获取accesstoken
+     * </p>
+     * @author cuiwx 2021/8/16
+     * @return  获取成功返回token，否则返回null
+     */
+    String getToken() throws ExecutionException;
 }

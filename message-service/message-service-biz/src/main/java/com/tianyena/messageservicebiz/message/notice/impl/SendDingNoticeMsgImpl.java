@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class SendDingNoticeMsgImpl implements SendDingNoticeMsg {
 
+    @Override
     public void sendDingNotice() throws ApiException {
         DingTalkClient client = new DefaultDingTalkClient(ENInterfaceInfo.WORK_NOTIFY_INFO.getUrl());
         OapiMessageCorpconversationAsyncsendV2Request request = new OapiMessageCorpconversationAsyncsendV2Request();
@@ -27,7 +28,7 @@ public class SendDingNoticeMsgImpl implements SendDingNoticeMsg {
         msg.getText().setContent("恕瑞玛 你的皇帝回来了");
         request.setMsg(msg);
 
-        OapiMessageCorpconversationAsyncsendV2Response response = client.execute(request, new TokenServiceImpl().getToken().getAccessToken());
+        OapiMessageCorpconversationAsyncsendV2Response response = client.execute(request, new TokenServiceImpl().getToken());
         log.info(response.toString());
     }
 }
