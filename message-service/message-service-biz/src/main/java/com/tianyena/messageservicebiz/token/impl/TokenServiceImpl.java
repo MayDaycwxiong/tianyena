@@ -67,7 +67,7 @@ public class TokenServiceImpl implements TokenService {
                 return oapiGetTokenResponse.get().getAccessToken();
             }
         } catch (Exception e) {
-            log.info("获取guava缓存出现异常！！！", e);
+            log.error("获取guava缓存出现异常！！！", e);
         }
         return null;
     }
