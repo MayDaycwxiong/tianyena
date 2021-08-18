@@ -20,7 +20,14 @@ public class TokenServiceImpl implements TokenService {
 
     private final String ACCESS_TOKEN = "ACCESS_TOKEN";
 
-
+    /**
+     * @description
+     * <p>
+     *     guava 官方文档： https://ifeve.com/google-guava-cachesexplained/
+     * </p>
+     * @author cuiwx 2021/8/18
+     * @return
+     */
     private RemovalListener<String, Optional<OapiGettokenResponse>> removeListener = new RemovalListener<String, Optional<OapiGettokenResponse>>() {
         @Override
         public void onRemoval(RemovalNotification<String, Optional<OapiGettokenResponse>> removal) {
