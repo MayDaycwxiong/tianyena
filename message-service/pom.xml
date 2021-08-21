@@ -7,7 +7,7 @@
     <groupId>com.tianyena</groupId>
     <artifactId>message-service</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>${reversion}</version>
 
     <modules>
         <module>message-service-biz</module>
@@ -15,14 +15,20 @@
         <module>message-service-common</module>
         <module>message-service-manager</module>
         <module>message-service-provider</module>
+        <module>message-service-deploy</module>
     </modules>
 
     <properties>
         <java.version>1.8</java.version>
-        <message-service.version>1.0-SNAPSHOT</message-service.version>
+        <reversion>1.0-SNAPSHOT</reversion>
         <spring-boot.version>2.5.3</spring-boot.version>
 
-        <apollo.version>1.9.0</apollo.version>
+        <!--三方jar包-->
+        <apollo.version>1.8.0</apollo.version>
+        <dubbo.version>2.5.3</dubbo.version>
+        <zookeeper.version>3.4.13</zookeeper.version>
+        <zkclient.version>0.1</zkclient.version>
+
         <!--工具包-->
         <lombok.version>1.18.8</lombok.version>
         <fastjson.version>1.2.76</fastjson.version>
