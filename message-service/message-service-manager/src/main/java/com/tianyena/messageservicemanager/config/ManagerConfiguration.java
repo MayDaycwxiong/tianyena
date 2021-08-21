@@ -4,6 +4,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("com.tianyena.messagemanager.config")
+@ComponentScan("com.tianyena.messageservicemanager")
 public class ManagerConfiguration {
 }

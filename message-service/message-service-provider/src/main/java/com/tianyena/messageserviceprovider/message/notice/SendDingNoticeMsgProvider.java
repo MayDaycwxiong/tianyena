@@ -19,6 +19,7 @@ public class SendDingNoticeMsgProvider implements SendDingNoticeMsgApi {
     @Autowired
     private SendDingNoticeMsg sendDingNoticeMsg;
 
+    @Override
     public void sendDingNotice(){
         try{
             sendDingNoticeMsg.sendDingNotice();

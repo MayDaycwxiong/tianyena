@@ -1,8 +1,6 @@
 package com.tianyena.messageservicebiz.token;
 
 
-import java.util.concurrent.ExecutionException;
-
 public interface TokenService {
     /**
      * @description
@@ -12,5 +10,5 @@ public interface TokenService {
      * @author cuiwx 2021/8/16
      * @return  获取成功返回token，否则返回null
      */
-    String getToken() throws ExecutionException;
+    String getToken();
 }
