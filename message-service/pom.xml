@@ -21,6 +21,8 @@
         <java.version>1.8</java.version>
         <message-service.version>1.0-SNAPSHOT</message-service.version>
         <spring-boot.version>2.5.3</spring-boot.version>
+
+        <apollo.version>1.9.0</apollo.version>
         <!--工具包-->
         <lombok.version>1.18.8</lombok.version>
         <fastjson.version>1.2.76</fastjson.version>
