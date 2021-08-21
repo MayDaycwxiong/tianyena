@@ -1,6 +1,6 @@
 package com.tianyena.messageservicedeploy;
 
-import com.tianyena.messageprovider.config.ProviderConfiguration;
+import com.tianyena.messageserviceprovider.config.ProviderConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;

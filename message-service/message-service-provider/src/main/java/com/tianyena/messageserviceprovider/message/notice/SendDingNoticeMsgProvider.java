@@ -1,4 +1,4 @@
-package com.tianyena.messageprovider.message.notice;
+package com.tianyena.messageserviceprovider.message.notice;
 
 import com.tianyena.messageserviceapi.message.notice.SendDingNoticeMsgApi;
 import com.tianyena.messageservicebiz.message.notice.SendDingNoticeMsg;

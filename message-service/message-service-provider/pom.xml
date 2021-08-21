@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>message-provider</artifactId>
+    <artifactId>message-service-provider</artifactId>
     <version>${message-service.version}</version>
 
     <dependencies>

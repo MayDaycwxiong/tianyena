@@ -1,4 +1,4 @@
-package com.tianyena.messagemanager.config;
+package com.tianyena.messageservicemanager.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

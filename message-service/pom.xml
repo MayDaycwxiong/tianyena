@@ -13,8 +13,8 @@
         <module>message-service-biz</module>
         <module>message-service-api</module>
         <module>message-service-common</module>
-        <module>message-manager</module>
-        <module>message-provider</module>
+        <module>message-service-manager</module>
+        <module>message-service-provider</module>
     </modules>
 
     <properties>
