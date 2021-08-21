@@ -25,6 +25,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class UserInfoServiceImpl implements UserInfoService {
 
+    @Override
     public void getUserInfoDetail(Long deptId, Long currentPage, Long pageSize) throws ApiException {
         DingTalkClient client = new DefaultDingTalkClient(ENInterfaceInfo.USER_DETAIL_INFO.getUrl());
         OapiV2UserListRequest request = new OapiV2UserListRequest();

@@ -16,6 +16,7 @@ import java.util.List;
 @Slf4j
 public class SendDingGroupMsgImpl implements SendDingGroupMsg {
 
+    @Override
     public void sendDingMsg(String webHooK, String msgType, String keyContent, String content, List<String> mobiles) throws ApiException {
         DingTalkClient client = new DefaultDingTalkClient(webHooK);
         OapiRobotSendRequest request = new OapiRobotSendRequest();

@@ -1,5 +1,6 @@
 package com.tianyena.messageservicebiz.message.notice.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.dingtalk.api.DefaultDingTalkClient;
 import com.dingtalk.api.DingTalkClient;
 import com.dingtalk.api.request.OapiMessageCorpconversationAsyncsendV2Request;
@@ -29,6 +30,6 @@ public class SendDingNoticeMsgImpl implements SendDingNoticeMsg {
         request.setMsg(msg);
 
         OapiMessageCorpconversationAsyncsendV2Response response = client.execute(request, new TokenServiceImpl().getToken());
-        log.info(response.toString());
+        log.info(JSON.toJSONString(response));
     }
 }
