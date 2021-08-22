@@ -1,6 +1,5 @@
 package com.tianyena.messageservicebiz.token.impl
 
-import com.dingtalk.api.response.OapiGettokenResponse
 import org.junit.runner.RunWith
 import org.powermock.core.classloader.annotations.PrepareForTest
 import org.powermock.modules.junit4.PowerMockRunner
@@ -18,26 +17,4 @@ class TokenServiceImplTest extends Specification {
 
     }
 
-    def "test getDingDingAccessToken"() {
-        given:
-        OapiGettokenResponse response = null
-
-        when: "获取token"
-        response = impl.getDingDingAccessToken()
-
-        then:
-        response != null
-        response.errcode == 0
-        notThrown(Exception)
-    }
-
-    def "test getToken"() {
-        given:
-
-        when:
-        String token = impl.getToken()
-        then:
-        token != null
-        notThrown(Exception)
-    }
 }
