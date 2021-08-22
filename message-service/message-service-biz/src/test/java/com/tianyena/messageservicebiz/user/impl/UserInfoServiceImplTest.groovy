@@ -1,5 +1,6 @@
 package com.tianyena.messageservicebiz.user.impl
 
+import com.tianyena.messageservicebiz.token.TokenService
 import org.junit.runner.RunWith
 import org.powermock.core.classloader.annotations.PrepareForTest
 import org.powermock.modules.junit4.PowerMockRunner
@@ -11,17 +12,21 @@ import spock.lang.Specification
 @PowerMockRunnerDelegate(Sputnik.class)
 @PrepareForTest([UserInfoServiceImpl.class])
 class UserInfoServiceImplTest extends Specification {
-    UserInfoServiceImpl impl=new UserInfoServiceImpl()
+    UserInfoServiceImpl impl = new UserInfoServiceImpl()
 
-    void setup(){
+    TokenService tokenService = Mock()
+
+    void setup() {
+        impl.tokenService = tokenService
     }
 
     def "test getUserInfoDetail"() {
         given:
 
         when:
-        impl.getUserInfoDetail(1L,0L,100L)
+        impl.getUserInfoDetail(1L, 0L, 100L)
         then:
+        1 * tokenService.getToken() >> "token"
         notThrown(Exception)
     }
 }
