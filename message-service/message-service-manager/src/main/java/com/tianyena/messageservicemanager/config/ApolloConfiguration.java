@@ -21,4 +21,10 @@ public class ApolloConfiguration {
 
     @Value("${dingding.appsecret:ya-oNtoOdWEJEuF88eCJymmfAHIihfiE6VrB56QkQ38FxVr0vkp5u_aT7IdW_v9L}")
     private String appsecret;
+
+    @Value("dingding.agentId:1261543742L")
+    private Long agentId;
+
+    @Value("dingding.biz.userIdList:")
+    private String userIdList;
 }
