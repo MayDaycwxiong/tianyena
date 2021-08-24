@@ -22,5 +22,12 @@
             <version>${spring-boot.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <!--内部依赖-->
+        <dependency>
+            <groupId>com.tianyena</groupId>
+            <artifactId>bill-service-provider</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 </project>

@@ -10,5 +10,17 @@
 
     <artifactId>bill-service-biz</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
 
+        <dependency>
+            <groupId>com.tianyena</groupId>
+            <artifactId>bill-service-manager</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>
