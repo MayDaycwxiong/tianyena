@@ -16,5 +16,11 @@
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${spring-boot.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.tianyena</groupId>
+            <artifactId>bill-service-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 </project>

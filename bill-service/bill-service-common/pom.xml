@@ -10,5 +10,8 @@
 
     <artifactId>bill-service-common</artifactId>
 
+    <dependencies>
+
+    </dependencies>
 
 </project>
