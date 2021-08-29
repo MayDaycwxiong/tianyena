@@ -14,6 +14,7 @@
         <module>bill-service-provider</module>
         <module>bill-service-biz</module>
         <module>bill-service-manager</module>
+        <module>bill-service-dao</module>
         <module>bill-service-common</module>
     </modules>
 
@@ -25,6 +26,17 @@
         <easyexcel.version>2.2.6</easyexcel.version>
         <swagger.version>1.5.22</swagger.version>
         <lombok.version>1.18.20</lombok.version>
+        <fastjson.version>1.2.76</fastjson.version>
+        <hutool.version>5.3.10</hutool.version>
+
+
+        <!-- spock相关 -->
+        <spock.version>1.1-groovy-2.4</spock.version>
+        <groovy.version>2.4.15</groovy.version>
+        <objenesis.version>2.6</objenesis.version>
+        <version.powermock>2.0.0</version.powermock>
+        <spring.version>4.3.18.RELEASE</spring.version>
+        <junit.version>4.12</junit.version>
     </properties>
 
     <build>

@@ -4,14 +4,13 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
- * @description
- * <p>
- *     账单汇总
- *     微信账单头部:16行信息提取
- *     微信账单明细:17行之后的信息
- * </p>
  * @author cuiwx
  * @version 1.0  2021/8/27
+ * @description <p>
+ * 账单汇总
+ * 微信账单头部:16行信息提取
+ * 微信账单明细:17行之后的信息
+ * </p>
  */
 @Data
 public class WeChatBillSummaryDTO {

@@ -8,19 +8,18 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>bill-service-manager</artifactId>
-
+    <artifactId>bill-service-dao</artifactId>
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>${spring-boot.version}</version>
+            <groupId>com.tianyena</groupId>
+            <artifactId>bill-service-api</artifactId>
+            <version>${project.version}</version>
         </dependency>
-
         <dependency>
             <groupId>com.tianyena</groupId>
-            <artifactId>bill-service-dao</artifactId>
+            <artifactId>bill-service-common</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
+
 </project>
